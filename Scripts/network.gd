@@ -10,9 +10,9 @@ var ip_adress
 
 func _ready() -> void:
 	if OS.get_name() == "Windows":
-		ip_adress == IP.get_local_adress()[3]
+		ip_adress == IP.get_local_addresses()[3]
 	else:
-		ip_adress == IP.get_local_adress()[3]
+		ip_adress == IP.get_local_addresses()[3]
 	
 	for ip in IP.get_local_addresses():
 		if ip.begins_with("192.168."):
