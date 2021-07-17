@@ -34,6 +34,8 @@ func _played_disconnected(id):
 
 func _connection_ok():
 	print("Successfully connected to server")
+	_register_player()
+	rpc_id(1, "_send_player_info", localPlayerID, PlayerData)
 	
 
 func _connection_fail():
@@ -43,3 +45,12 @@ func _connection_fail():
 func _server_disconnected():
 	print("Disconnected")
 	
+
+func _register_player():
+	localPlayerID = get_tree().get_network_unique_id()
+	PlayerData = Save.saveData
+	Players[localPlayerID] = PlayerData
+	
+
+sync func update_waiting_room():
+	pass

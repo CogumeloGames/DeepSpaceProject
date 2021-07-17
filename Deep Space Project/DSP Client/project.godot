@@ -17,6 +17,7 @@ run/low_processor_mode=true
 [autoload]
 
 Server="*res://Scripts/server/Server.gd"
+Save="*res://Saves/Save.gd"
 
 [display]
 
