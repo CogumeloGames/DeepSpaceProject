@@ -11,16 +11,13 @@ config_version=4
 [application]
 
 config/name="DeepSpaceProject"
-run/main_scene="res://Scenes/Network_setup.tscn"
+run/main_scene="res://Scenes/Lobby/Lobby.tscn"
 run/low_processor_mode=true
 
 [autoload]
 
-PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
-IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
-UserData="*res://addons/github-integration/scripts/user_data.gd"
-RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
-Network="*res://Scripts/Network.gd"
+Server="*res://Scripts/server/Server.gd"
+Save="*res://Saves/Save.gd"
 
 [display]
 

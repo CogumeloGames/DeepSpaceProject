@@ -1,0 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="DSP server"
+run/main_scene="res://server/Server.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Server="*res://server/Server.gd"
+
+[physics]
+
+common/enable_pause_aware_picking=true
