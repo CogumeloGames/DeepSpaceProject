@@ -15,7 +15,7 @@ func get_data():
 		saveData = {"Player name": "Unnamed"}
 		save_game()
 		
-	file.open(SAVEGAME, _File.READ)
+	file.open(SAVEGAME, file.READ)
 	var content = file.get_as_text()
 	var data    = parse_json(content)
 	saveData = data

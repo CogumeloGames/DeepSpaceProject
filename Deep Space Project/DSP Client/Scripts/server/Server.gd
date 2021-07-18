@@ -4,8 +4,8 @@ const DEFAULT_IP    = "127.0.0.1"
 const DEFAULT_PORT  = 6969
 
 var network         = NetworkedMultiplayerENet.new()
-var selectedIP      = DEFAULT_IP
-var selectedPort    = DEFAULT_PORT
+var selectedIP     
+var selectedPort    
 
 var localPlayerID   = 0
 sync var Players    = {}
