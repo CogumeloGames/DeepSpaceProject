@@ -12,10 +12,10 @@ func get_data():
 	var file = File.new()
 	
 	if not file.file_exists(SAVEGAME):
-		saveData = {"Player name": "Unnamed"}
+		saveData = {"Player_name": "Unnamed"}
 		save_game()
 		
-	file.open(SAVEGAME, _File.READ)
+	file.open(SAVEGAME, File.READ)
 	var content = file.get_as_text()
 	var data    = parse_json(content)
 	saveData = data

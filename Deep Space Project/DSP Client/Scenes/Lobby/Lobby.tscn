@@ -32,21 +32,77 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 960.0
-margin_top = 533.0
-margin_right = 960.0
-margin_bottom = 547.0
+margin_left = 795.0
+margin_top = 454.0
+margin_right = 1125.0
+margin_bottom = 626.0
+rect_pivot_offset = Vector2( 162.811, 84.7163 )
+custom_constants/separation = 15
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 330.0
 margin_bottom = 14.0
+text = "Lobby"
+align = 1
 
-[node name="JoinButton" type="Button" parent="CenterContainer"]
-margin_left = 923.0
-margin_top = 530.0
-margin_right = 997.0
-margin_bottom = 550.0
-rect_scale = Vector2( 3, 3 )
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 29.0
+margin_right = 330.0
+margin_bottom = 137.0
+custom_constants/vseparation = 18
+custom_constants/hseparation = 7
+columns = 2
+
+[node name="NameLabel" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
+margin_top = 5.0
+margin_right = 73.0
+margin_bottom = 19.0
+text = "Name:"
+
+[node name="NameTextBox" type="LineEdit" parent="CenterContainer/VBoxContainer/GridContainer"]
+margin_left = 80.0
+margin_right = 330.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 250, 0 )
+text = "Enter Name"
+align = 1
+
+[node name="IPLabel" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
+margin_top = 47.0
+margin_right = 73.0
+margin_bottom = 61.0
+text = "IP Address:"
+
+[node name="IPTextBox" type="LineEdit" parent="CenterContainer/VBoxContainer/GridContainer"]
+margin_left = 80.0
+margin_top = 42.0
+margin_right = 330.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 250, 0 )
+text = "Enter IP Address"
+align = 1
+
+[node name="PortLabel" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
+margin_top = 89.0
+margin_right = 73.0
+margin_bottom = 103.0
+text = "Port:"
+
+[node name="PortTextBox" type="LineEdit" parent="CenterContainer/VBoxContainer/GridContainer"]
+margin_left = 80.0
+margin_top = 84.0
+margin_right = 330.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 250, 0 )
+text = "Enter Port Number"
+align = 1
+
+[node name="JoinButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 152.0
+margin_right = 330.0
+margin_bottom = 172.0
 rect_pivot_offset = Vector2( 36.7327, 10.9539 )
 text = "Join game"
 
-[connection signal="pressed" from="CenterContainer/JoinButton" to="." method="_on_JoinButton_pressed"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/GridContainer/NameTextBox" to="." method="_on_NameTextBox_text_changed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/JoinButton" to="." method="_on_JoinButton_pressed"]
