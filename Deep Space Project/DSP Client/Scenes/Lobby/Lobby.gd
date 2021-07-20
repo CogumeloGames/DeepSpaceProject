@@ -5,7 +5,7 @@ onready var selectedIP = $CenterContainer/VBoxContainer/GridContainer/IPTextBox
 onready var selectedPort = $CenterContainer/VBoxContainer/GridContainer/PortTextBox
 
 func _ready():
-	playerName.text = Save.saveData("Player_name")
+	playerName.text = Save.saveData["Player_name"]
 	selectedIP.text = Server.DEFAULT_IP
 	selectedPort.text = str(Server.DEFAULT_PORT)
 
@@ -16,5 +16,5 @@ func _on_JoinButton_pressed():
 	
 
 func _on_NameTextBox_text_changed(new_text):
-	Save.saveData["Player_Name"] = playerName.text
-	Save.SAVEGAME()
+	Save.saveData["Player_name"] = playerName.text
+	Save.save_game()

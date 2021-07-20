@@ -36,7 +36,6 @@ margin_left = 795.0
 margin_top = 454.0
 margin_right = 1125.0
 margin_bottom = 626.0
-rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 162.811, 84.7163 )
 custom_constants/separation = 15
 

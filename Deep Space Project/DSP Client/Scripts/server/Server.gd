@@ -51,6 +51,3 @@ func _register_player():
 	PlayerData = Save.saveData
 	Players[localPlayerID] = PlayerData
 	
-
-sync func update_waiting_room():
-	pass
